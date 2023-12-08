@@ -1,3 +1,21 @@
-from django.shortcuts import render
+# Импортируем класс, который говорит нам о том,
+# что в этом представлении мы будем выводить список объектов из БД
+from django.views.generic import ListView
+from .models import Product
 
-# Create your views here.
+
+class ProductsList(ListView):
+
+    # Указываем модель, объекты которого мы будем выводить
+    model = Product
+
+    # Поле, которое будет использоваться для сортировки объетов
+    ordering = 'name'
+
+    # Указываем имя шаблона, в котором будут все инструкции о том,
+    # как именно пользователю должны быть показаны наши объекты
+    template_name = 'products.html'
+
+    # Это имя списка, в ктором будут лежать все объекты.
+    # Кго надо указать, чтобы обратиться к списку объектов в html-шаблоне.
+    context_object_name = 'products'
