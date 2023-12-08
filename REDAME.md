@@ -65,22 +65,26 @@ python manage.py runserver
 #
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 #
-# Установил приложение Flatpages | Документация - > https://docs.djangoproject.com/en/3.1/ref/contrib/flatpages/
+# ↓ + ↓ Установил приложение Flatpages | Документация - > https://docs.djangoproject.com/en/3.1/ref/contrib/flatpages/
+# [ 1 ]В project/project/settings.py -> INSTALLED_APPS | 42 | 'django.contrib.sites', # <- Для работы приложения Flatpages
+#                                                 | 43 | 'django.contrib.flatpages', # <- Для работы приложения Flatpages
 #
-# В project/project/settings.py -> INSTALLED_APPS | 41 'django.contrib.sites', # <- Для работы приложения Flatpages
-#                                                 | 42 'django.contrib.flatpages', # <- Для работы приложения Flatpages
+# [ 2] В project/project/settings.py -> MIDDLEWARE | 55 | 'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware', # <- Для работы приложения Flatpages
 #
-# В project/project/settings.py -> MIDDLEWARE | 54 | 'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware', # <- Для работы приложения Flatpages
+# [ 3 ] В project/project/settings.py -> | 58 | SITE_ID = 1 # <- Для работы приложения Flatpages
 #
-# В project/project/settings.py -> | 57 SITE_ID = 1 # <- Для работы приложения Flatpages
+# [ 4 ] В project/project/settings.py -> | 56 | 'DIRS': [os.path.join(BASE_DIR, 'templates')], # <- Для работы приложения Flatpages
 #
-# В project/project/urls.py -> | include | 18 | from django.urls import path, include
+# [ 5 ] В project/project/urls.py -> | include | 2 | from django.urls import path, include # include <- Для работы приложения Flatpages
 #
-# В project/project/urls.py -> | 22 | path('pages/', include('django.contrib.flatpages.urls')),
+# [ 6 ] В project/project/urls.py -> | 6 | path('pages/', include('django.contrib.flatpages.urls')), # <- Для работы приложения Flatpages
+# 
+# [ 7 ] В project -> New -> File -> templates/flatpages/defauld.html
 #
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 #
-# B project/simpleapp/models.py -> |  1 | from django.db import models
+# ↓ + ↓ B project/simpleapp/models.py 
+#                                  |  1 | from django.db import models
 #                                  |  2 | from django.core.validators import MinValueValidator
 #                                  |  3 |
 #                                  |  4 |
