@@ -4,4 +4,8 @@ from django.urls import path, include # include <- Для работы прил�
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('pages/', include('django.contrib.flatpages.urls')), # <- Для работы приложения Flatpages
+
+    # Делаем так, чтобы все адреса из нашего приложения (simplepp/urls.py)
+    # подключились к главному приложению с прификсом products/.
+    path('products/', include('simplepp.urls'))
 ]
