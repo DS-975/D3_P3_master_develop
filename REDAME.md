@@ -40,7 +40,7 @@ python manage.py runserver
 #
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 #
-# Cоздём новые миграции
+# Создаём новые миграции
 python manage.py makemigrations
 #
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -50,7 +50,7 @@ python manage.py migrate
 #
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 #
-# Cоздаём админку
+# Создаём админку 
 #
 python manage.py createsuperuser
 #
