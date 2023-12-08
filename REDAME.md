@@ -29,8 +29,8 @@ django-admin startproject project
 cd .\project
 #
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-#
-# Создадим приложение simpleapp
+# 
+# Создал приложение simpleapp
 python manage.py startapp simpleapp
 #
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
