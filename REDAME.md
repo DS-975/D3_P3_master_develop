@@ -175,17 +175,19 @@ python manage.py runserver
 #                                | 12 | ]
 #
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-#
-# B project/project/urls.py -> |  1 | from django.contrib import admin
+# 
+# ↓ + ↓ B project/project/urls.py 
+#                              |  1 ||  1 | from django.contrib import admin
 #                              |  2 | from django.urls import path, include
 #                              |  3 |
 #                              |  4 | urlpatterns = [
 #                              |  5 |    path('admin/', admin.site.urls),
 #                              |  6 |    path('pages/', include('django.contrib.flatpages.urls')),
-#                              |  7 |    # Делаем так, чтобы все адреса из нашего приложения (simpleapp/urls.py)
-#                              |  8 |    # подключались к главному приложению с префиксом products/.
-#                              |  9 |    path('products/', include('simpleapp.urls')),
-#                              | 10 ] ]
+#                              |  7 |
+#                              |  8 |    # Делаем так, чтобы все адреса из нашего приложения (simpleapp/urls.py)
+#                              |  9 |    # подключались к главному приложению с префиксом products/.
+#                              | 10 |    path('products/', include('simpleapp.urls')),
+#                              | 11 ] ]
 #
 #
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
