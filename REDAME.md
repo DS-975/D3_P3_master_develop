@@ -122,12 +122,13 @@ python manage.py runserver
 #
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 #
-# B project/simpleapp/admin.py -> | 1 | from django.contrib import admin
-#                                 | 2 | from .models import Category, Product
-#                                 | 3 |
-#                                 | 4 |
-#                                 | 5 | admin.site.register(Category)
-#                                 | 6 | admin.site.register(Product)
+# ↓ + ↓ B project/simpleapp/admin.py 
+#                                   | 1 | from django.contrib import admin
+#                                   | 2 | from .models import Category, Product
+#                                   | 3 |
+#                                   | 4 |
+#                                   | 5 | admin.site.register(Category)
+#                                   | 6 | admin.site.register(Product)
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 #
 # B project/simpleapp/views.py -> |  1 | # Импортируем класс, который говорит нам о том,

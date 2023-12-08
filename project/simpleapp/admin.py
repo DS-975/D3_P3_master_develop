@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import Caterory, Product
 
-# Register your models here.
+admin.site.register(Caterory)
+admin.site.register(Product)
