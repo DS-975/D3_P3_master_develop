@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'simpleapp',
+
     'django.contrib.sites', # <- Для работы приложения Flatpages
     'django.contrib.flatpages', # <- Для работы приложения Flatpages
 ]
